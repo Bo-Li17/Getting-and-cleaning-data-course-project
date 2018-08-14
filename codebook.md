@@ -2,16 +2,19 @@
 The dataset is downloaded from 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-## Raw data description
-The raw dataset includes the following files we concern:
-* "features.txt": List of all features.  Normalized and bounded within [-1,1].
-* "activity_labels.txt": Links the class labels with their activity name.
-* "train/X_train.txt": Training set.
-* "train/y_train.txt": Training labels correspond to activity_labels.
-* "train/subject_train.txt": Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-* "test/X_test.txt": Test set.
-* "test/y_test.txt": Test labels.
-* "test/subject_test.txt": Same as "train/subject_train.txt"
+## Variable description
+* X_train: Training set data, each colunm is a numeric vector, the values are normalized and bounded within [-1,1]
+* Y_train: Training labels correspond to activity_labels, values are intger between 1 and 6.
+* subject_train: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+* X_test: Test set data, each colunm is a numeric vector, the values are normalized and bounded within [-1,1]
+* Y_test: Test labels correspond to activity_labels, values are intger between 1 and 6.
+* subject_test: Similar to subject_train.
+* features:  A 561-row data frame. The first colunm are the indexes(integer) and the second are the feature names(character).
+* activity_labels: A (6,2) data fram. The second colunm contains the activity names(character) and the first colunm is their correspond number(integer).
+* X: The merged data of X_train and X_test.
+* Y: The merged data of Y_train and Y_test.
+* subject: The merged data of subject_train and subject_test.
+* tidydata: The final data we need.
 
 ## Code process
 * Read data files we need.
